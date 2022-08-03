@@ -3,6 +3,8 @@ import './App.css';
 import NewsNowIcon from './Assests/NewsNowIcon.png'
 import ArticleFilters from './ArticleFilters/ArticleFilters';
 import NewsBriefs from './NewsBreifs/NewsBriefs';
+import SelectedArticle from './SelectedArticle/SelectedArticle';
+import { Route, NavLink } from 'react-router-dom'
 
 function App() {
 
@@ -24,8 +26,8 @@ function App() {
         <h1 className='website-title'>News Now</h1>
       </div>
       <ArticleFilters filterFunction={selectFilter} />
-      {articlesPage ? <NewsBriefs articles={articlesPage} /> : ''}
-
+      <Route exact path='/' render={() => articlesPage ? <NewsBriefs articles={articlesPage} /> : ''} />
+      <Route exaxt path='/:title' render={({ match }) => { return <SelectedArticle selectedArticle={match.params.title} allArticles={articlesPage} /> }} />
 
     </div>
   );
