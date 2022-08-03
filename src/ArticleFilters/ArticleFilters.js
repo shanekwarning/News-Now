@@ -1,7 +1,7 @@
 import React from 'react'
 import './ArticleFilters.css'
 
-const ArticleFilters = () => {
+const ArticleFilters = ({ filterFunction }) => {
     const buttons = ['arts',
         'automobiles',
         'books',
@@ -17,7 +17,7 @@ const ArticleFilters = () => {
         'obituaries',
         'opinion',
         'politics',
-        'reaestate',
+        'realestate',
         'science',
         'sports',
         'sundayreview',
@@ -31,10 +31,10 @@ const ArticleFilters = () => {
     ]
 
     const filters = buttons.map(button => {
-        return <button>{button}</button>
+        return <button className='button-solid' onClick={() => filterFunction(button)}>{button}</button>
     })
     return (
-        <div>{filters}</div>
+        <div className='button-box'>{filters}</div>
     )
 }
 

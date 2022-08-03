@@ -1,0 +1,34 @@
+.articles-box {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto
+}
+
+.article-card-container {
+    text-align: center;
+    height: 20vh;
+    width: 80vw
+}
+
+.article-card {
+    border: solid, black, 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.article-title {
+    font-weight: bolder;
+}
+
+.article-section {
+    padding-right: 15%
+}
+
+/* .article-abstract {
+    display: flex;
+    justify-content: center;
+} */

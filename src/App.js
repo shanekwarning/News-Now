@@ -6,24 +6,25 @@ import NewsBriefs from './NewsBreifs/NewsBriefs';
 
 function App() {
 
-  const [homePage, setHomePage] = useState([])
+  const [articlesPage, setArticlesPage] = useState('')
 
   useEffect(() => {
-    fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=6dWDbpnkwGMXRHAuObTLsRvhc21hoItI').then(data => data.json()).then(data => setHomePage(data.results))
+    fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=6dWDbpnkwGMXRHAuObTLsRvhc21hoItI').then(data => data.json()).then(data => setArticlesPage(data.results))
   }, [])
 
-  console.log(homePage)
+  const selectFilter = (filter) => {
+    fetch(`https://api.nytimes.com/svc/topstories/v2/${filter}.json?api-key=6dWDbpnkwGMXRHAuObTLsRvhc21hoItI`).then(data => data.json()).then(data => setArticlesPage(data.results))
+  }
+
+  console.log(articlesPage)
   return (
     <div className="App">
       <div className='heading'>
         <img src={NewsNowIcon} />
-        <h1>News Now</h1>
+        <h1 className='website-title'>News Now</h1>
       </div>
-      <ArticleFilters />
-      <div>I am a card</div>
-      <div>I am a card</div>
-      <div>I am a card</div>
-      <div>I am a card</div>
+      <ArticleFilters filterFunction={selectFilter} />
+      {articlesPage ? <NewsBriefs articles={articlesPage} /> : ''}
 
 
     </div>

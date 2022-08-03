@@ -1,0 +1,37 @@
+.button-box {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.button-solid {
+    text-decoration: none;
+    border: none;
+    margin: 2px;
+    font-size: 16px;
+    background-color: green;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+}
+
+
+.button-solid:hover {
+    color: blue;
+}
+
+.button-solid:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}
+
+button-solid:focus {
+    border: none;
+    outline: none;
+}
