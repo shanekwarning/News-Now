@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# News Now
+  ### About The Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+News Now allows the user to browse news articles, see a breif overview of the article and be able to click the link to the articles source at the NYT webpage. 
 
-## Available Scripts
+This was a part of Turing School Software & Design take home challenge.
 
-In the project directory, you can run:
+### Getting Started
+ 1. Clone this repo to your location machine from [Here](git@github.com:shanekwarning/News-Now.git)
+ 2. cd into news-now
+ 3. Next you will want to run in your command line: `npm install`. You will not want to run npm audit fix.
+ 4. To open the application in your browser you will want to run `npm start`. This will run webpack from your terminal. It should show in your terminal http://localhost:3000/
+ 5. Copy and past http://localhost:3000/ to your webbrowser. Google Chrome may work best. 
+ 6. Once you are done viewing the application you can go back to your terminal to close it. You will want to type Control + C and this will stop webpack from running on your local host. 
 
-### `npm start`
+### Using the Application
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+  * View a Article's Overview - To view an arcticles overview, a user can click on a specific article of their choice on the homepage. They will be taken to another page to view the overview.
+   
+  * Link to the NYT - To go to the full article users can click the article title from the article overview page to be taken to the NYT page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  * Filter by subject - Users can click any of the green buttons in the navbar to filter articles that share the selected key word. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Technologies Used 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  * React
+  * Javascript
+  * JSX
+  * CSS
+  * restful APIs
+  * React Router
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Contributors
 
-### `npm run eject`
+  * [Shane Warning](https://github.com/shanekwarning)
+ 
+### Challeneges and Wins
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Challenges
+  * Challenges were getting the images to dispaly on the selected article page. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Wins
+ * Creating a mininum viable project on a time crunch. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Project Goals
+  * Create a minium viable product in a limited time frame. 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Future Additions
+  * Testing using cypress. 
+  * No having repeat photos.
+  * Borders around articles. 
