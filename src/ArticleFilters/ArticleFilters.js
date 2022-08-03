@@ -1,5 +1,6 @@
 import React from 'react'
 import './ArticleFilters.css'
+import { NavLink } from 'react-router-dom'
 
 const ArticleFilters = ({ filterFunction }) => {
     const buttons = ['arts',
@@ -31,7 +32,7 @@ const ArticleFilters = ({ filterFunction }) => {
     ]
 
     const filters = buttons.map(button => {
-        return <button className='button-solid' onClick={() => filterFunction(button)}>{button}</button>
+        return <NavLink to='/' ><button className='button-solid' onClick={() => filterFunction(button)}>{button}</button></NavLink>
     })
     return (
         <div className='button-box'>{filters}</div>
