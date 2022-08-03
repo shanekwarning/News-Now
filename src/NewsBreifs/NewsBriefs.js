@@ -17,7 +17,7 @@ const NewsBriefs = ({ articles }) => {
                         <p className='article-abstract'>{article.abstract}</p>
                     </div>
                     <br />
-                    <img className='news-breif-img' src={article.multimedia[2].url} />
+                    {article.multimedia ? <img className='news-breif-img' src={article.multimedia[2].url} /> : ''}
                 </div>
             </div>
         </NavLink>
