@@ -2,10 +2,10 @@ import React from 'react'
 import './NewsBriefs.css'
 import { NavLink } from 'react-router-dom'
 
-const NewsBriefs = ({ articles }) => {
+const NewsBriefs = ({ articles, setFoundArticle }) => {
 
     const articleCards = articles.map((article, index) => {
-        return <NavLink to={`/${article.title}`} key={`${index}`} style={{ textDecoration: 'none' }}>
+        return <NavLink to={`/${article.title}`} key={`${index}`} style={{ textDecoration: 'none' }} onClick={(() => setFoundArticle(articles.find(article => article.title === article.title)))}>
             <div className='article-card-container'>
                 <div className='article-title-box'>
                     <p className='article-title'>{article.title}</p>
