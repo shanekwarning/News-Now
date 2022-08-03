@@ -5,15 +5,20 @@ import { NavLink } from 'react-router-dom'
 const NewsBriefs = ({ articles }) => {
 
     const articleCards = articles.map((article, index) => {
-        return <NavLink to={`/${article.title}`} key={`${index}`}>
+        return <NavLink to={`/${article.title}`} key={`${index}`} style={{ textDecoration: 'none' }}>
             <div className='article-card-container'>
-                <div className='article-card'>
-                    <p className='article-section'>{article.section}</p>
-                    <br />
+                <div className='article-title-box'>
                     <p className='article-title'>{article.title}</p>
                 </div>
-                <p className='article-abstract'>{article.abstract}</p>
-
+                <div className='article-card'>
+                    <p className='article-category'>Category: {article.section}</p>
+                    <br />
+                    <div className='news-brief-abstract-box'>
+                        <p className='article-abstract'>{article.abstract}</p>
+                    </div>
+                    <br />
+                    {article.multimedia ? <img className='news-breif-img' src={article.multimedia[2].url} /> : ''}
+                </div>
             </div>
         </NavLink>
 
