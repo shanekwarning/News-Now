@@ -9,6 +9,7 @@ import { Route, NavLink } from 'react-router-dom'
 function App() {
 
   const [articlesPage, setArticlesPage] = useState('')
+  const [foundArticle, setFoundArticle] = useState('')
 
   useEffect(() => {
     fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=6dWDbpnkwGMXRHAuObTLsRvhc21hoItI').then(data => data.json()).then(data => setArticlesPage(data.results))
@@ -26,11 +27,13 @@ function App() {
         <h1 className='website-title'>News Now</h1>
       </div>
       <ArticleFilters filterFunction={selectFilter} />
-      <Route exact path='/' render={() => articlesPage ? <NewsBriefs articles={articlesPage} /> : ''} />
-      <Route exaxt path='/:title' render={({ match }) => { return <SelectedArticle selectedArticle={match.params.title} allArticles={articlesPage} /> }} />
+      <Route exact path='/' render={() => articlesPage ? <NewsBriefs articles={articlesPage} setFoundArticle={setFoundArticle} /> : ''} />
+      <Route exaxt path='/:title' render={({ match }) => { return <SelectedArticle selectedArticle={match.params.title} foundArticle={foundArticle} /> }} />
 
     </div>
   );
 }
 
 export default App;
+
+// allArticles={articlesPage}
